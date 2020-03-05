@@ -3,7 +3,7 @@ email: geekify@free.fr
 description: Yet another maker's blog
 repository: "mchacher/mchacher.github.io"
 url: "https://mchacher.github.io/index.html"
-#baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://mchacher.github.io/"
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 include:
