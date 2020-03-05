@@ -4,7 +4,6 @@ category: web
 date: 2020-03-03
 last_modified_at: 2019-03-04
 excerpt: "A guide detailing my process for building this website using the static site generator Jekyll and the theme Minimal Mistakes"
-ref: jekyll-minimal-mistakes
 ---
 
 I learned a lot while building this website; I hope to share it so that it might be
