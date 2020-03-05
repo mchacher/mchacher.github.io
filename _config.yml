@@ -1,8 +1,10 @@
 title: Geekify 
 email: geekify@free.fr 
 description: Yet another maker's blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+repository: "mchacher/mchacher.github.io"
+url: "https://mchacher.github.io/index.html"
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 include:
   - _pages
