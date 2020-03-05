@@ -35,7 +35,8 @@ logo: "/assets/images/geekify_logo.png"
 author:
   name   : "Marc Chachereau"
   avatar : "/assets/images/headshot.jpg"
-  bio    : "I enjoy writing about things I'm interested in - mostly electronics, software engineering and 3D printing.  All these domains combined, makes me a maker, enjoying home automation or any other domains where I can put my creativity to work."
+  bio    : "I enjoy writing about things I'm interested in - mostly electronics, software engineering and 3D printing.  
+           All these domains combined, makes me a maker, enjoying home automation or any other areas where I can put my creativity to work."
   location: "Grenoble area, France"
   github : mchacher
   linkedin: marc-chachereau-067a9a4
