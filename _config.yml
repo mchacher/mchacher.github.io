@@ -42,18 +42,6 @@ author:
   linkedin: marc-chachereau-067a9a4
 
 
-# # comments by disqus
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "pwills-com"
-
-analytics:
-  provider: "google"
-  google:
-    tracking_id: "UA-116208936-1"
-
-
 # pagination for blog page
 paginate: 10 # number of posts to show
 paginate_path: /page:num/
