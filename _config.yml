@@ -53,29 +53,16 @@ defaults:
       path: ""
     values:
       layout: single
-      author_profile: true
-      class: wide
       title: " "
       title_separator: "|"
-  # posts
+      author_profile: true
+
   - scope:
+      path: ""
       type: posts
     values:
+      layout: single
       toc: true
       toc_label: "Contents"
       read_time: false
       comments: true
-  # portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      author_profile: false
-      excerpt: ""
-      sidebar:
-        nav: "portfolio"
-
-# collections
-collections:
-  portfolio:
-    output: true
