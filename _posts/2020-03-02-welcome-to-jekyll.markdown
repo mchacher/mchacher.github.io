@@ -8,7 +8,7 @@ excerpt: "A guide detailing my process for building this website using the stati
 
 I was looking for a solution to build a personnal website when I decided to launch Geekify.
 
-I used to design websites on my own a couple of years ago but this time I wanted to leverage a more "ready-to-use" solution. I used to have a small experience with blog / CMS platforms, namely [dotclear](http://kramdown.gettalong.org) and [Wordpress](https://wordpress.org/).  These platforms are good, but way too much over-engineered for a simple blog like this one (database required, user management, etc ...). Looking at some alternatives, the concept of static websites generator was quite interesting, and so I decided to give a try to [Jekyll](https://jekyllrb.com/).
+I used to design websites on my own a couple of years ago but this time I wanted to leverage a more "ready-to-use" solution. I have played as well with blog / CMS platforms like [dotclear](http://kramdown.gettalong.org) and [Wordpress](https://wordpress.org/).  Although these platforms are good, they are overkill for a simple blog like this one (database required, user management, etc ...). Looking at some alternatives, the concept of static websites generator was quite interesting, and so I decided to give a try to [Jekyll](https://jekyllrb.com/).
 
 ## Static Web Site Generator
 
