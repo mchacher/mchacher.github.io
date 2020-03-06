@@ -1,11 +1,11 @@
 ---
-title: "About Me"
+title: ""
 permalink: /about/
 layout: category  
 classes: wide
 ---
 
-
+# About Me
 
 <img src="{{ "/assets/images/grenoble.jpg" }}" style="margin: 0px 0px 10px 10px" width="40%" align="right">
 
