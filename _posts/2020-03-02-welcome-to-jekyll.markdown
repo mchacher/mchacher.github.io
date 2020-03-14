@@ -37,7 +37,7 @@ Designate the `remote_theme` variable, but do so after setting the theme, so tha
     theme: "minimal-mistakes-jekyll"
     remote_theme: "mmistakes/minimal-mistakes"
 
-### Customized Font Size
+### Customized Font Size, paragraphs layout
 
 Like Peter Wills, I found the fonts a bit oversized, so I followed his recommendations to customize them. 
 In order to do this, you need to copy the entire folder which contains all the relevant scss files. 
@@ -72,7 +72,8 @@ A couple of file were updated to adjust the size, margin between paragraphs.
 * `_sass/minimal-mistakes/_navigation.scss`
 * `_sass/minimal-mistakes/_page.scss`
 * `_sass/minimal-mistakes/_variables.scss`
-You can have a look at the diff of the updates [here][https://github.com/mchacher/mchacher.github.io/commit/99876ad05e9dee1b126539fb22df16e15984339a?diff=split]
+
+You can have a look at the diff of the updates [here][github_diff]
 
 
 [wordpress]: [https://wordpress.org/]
@@ -80,3 +81,4 @@ You can have a look at the diff of the updates [here][https://github.com/mchache
 [mmistakes_tuto]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#starting-from-jekyll-new
 [mchacher_github]: https://github.com/mchacher/mchacher.github.io
 [pwills]: http://www.pwills.com/
+[github_diff]: https://github.com/mchacher/mchacher.github.io/commit/99876ad05e9dee1b126539fb22df16e15984339a?diff=split
