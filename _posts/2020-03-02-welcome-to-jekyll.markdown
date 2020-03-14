@@ -25,23 +25,44 @@ Each commit and push result in an automatic update of this website, it is fast, 
 
 ## Starting with Jekyll and Minimal Mistakes
 
-### forewords
+### Forewords
 Many tutorials are available on the net. I am especially grateful to [Peter Wills][pwills] who did a great job sharing his experience. I have built this website based on the work he did to customize minimal-mistakes.
 The website for Minimal Mistakes includes a great [quick-start guide][mmistakes_tuto]. This is definetely a good place to start. Using this you should be able to establish a base site with some simple demonstration content, using the Minimal Mistakes theme.
 
 You can always look directly at [the source code for my site][mchacher_github] if you want to see exactly what I have in my `Gemfile`, or `_config.yml`, or whatever.
 
 They key point is to enable minimal-mistake as a theme, this is done in the `_config.yml` file.
+Designate the `remote_theme` variable, but do so after setting the theme, so that you have in your config file
 
-If you have other plugins you want to use (I use `jekyll-feed`), then add them
-to this list as well. Designate the `remote_theme` variable, but do so **after
-setting the theme**, so that you have in your config file
+    theme: "minimal-mistakes-jekyll"
+    remote_theme: "mmistakes/minimal-mistakes"
 
-	theme: "minimal-mistakes-jekyll"
-	remote_theme: "mmistakes/minimal-mistakes"
+### Customized Font Size
 
-### customization
+Like Peter Wills, I found the fonts a bit oversized, so I followed his recommendations to customize them. 
+In order to do this, you need to copy the entire folder which contains all the relevant scss files. 
 
+	cd $(bundle show minimal-mistakes-jekyll)
+	cp -r _sass /path/to/site
+	
+The file `_sass/_reset.scss` is defining 3 levels of `font-size`, respectively medium, large and x-large. This is then used in all `*.scss`.
+
+{% highlight html %}
+  @include breakpoint($medium) {
+    font-size: 13px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 15px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18px;
+  }
+{% endhighlight %}
+
+Once this file has been edited, you should see the font size reduced in your
+page. 
 
 
 
