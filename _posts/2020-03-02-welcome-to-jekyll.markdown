@@ -65,14 +65,14 @@ File: _sass/_reset.scss
 
 Once this file has been edited, you should see the font size reduced in your page. 
 
-I did further modification, since even with these modification of the font sizes, I was not satisfied. 
-A couple of file were updated:
+I did further modification, since even with these modifications, I was not satisfied. 
+A couple of file were updated to adjust the size, margin between paragraphs.
 * `_sass/minimal-mistakes/_archive.scss`
 * `_sass/minimal-mistakes/_base.scss`
 * `_sass/minimal-mistakes/_navigation.scss`
 * `_sass/minimal-mistakes/_page.scss`
 * `_sass/minimal-mistakes/_variables.scss`
-
+You can have a look at the diff of the updates [here][https://github.com/mchacher/mchacher.github.io/commit/99876ad05e9dee1b126539fb22df16e15984339a?diff=split]
 
 
 [wordpress]: [https://wordpress.org/]
