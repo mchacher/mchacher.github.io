@@ -2,13 +2,13 @@
 title:  "Building a Personal Site with Jekyll & Minimal Mistakes"
 category: web
 date: 2020-03-03
-last_modified_at: 2019-03-04
+last_modified_at: 2019-03-14
 excerpt: "A guide detailing my process for building this website using the static site generator Jekyll and the theme Minimal Mistakes"
 ---
 
 I was looking for a solution to build a personnal website when I decided to launch Geekify.
 
-I used to design websites on my own a couple of years ago but this time I wanted to leverage a more "ready-to-use" solution. I have played as well with blog / CMS platforms like [dotclear](http://kramdown.gettalong.org) and [Wordpress](https://wordpress.org/).  Although these platforms are good, they are overkill for a simple blog like this one (database required, user management, etc ...). Looking at some alternatives, the concept of static websites generator was quite interesting, and so I decided to give a try to [Jekyll](https://jekyllrb.com/).
+I used to design websites on my own a couple of years ago but this time I wanted to leverage a more "ready-to-use" solution. I have played as well with blog / CMS platforms like [dotclear](http://kramdown.gettalong.org) and [Wordpress][wordpress].  Although these platforms are good, they are overkill for a simple blog like this one (database required, user management, etc ...). Looking at some alternatives, the concept of static websites generator was quite interesting, and so I decided to give a try to [Jekyll][jekyll].
 
 ## Static Web Site Generator
 
@@ -21,14 +21,19 @@ A static web page is delivered to the user's web browser exactly as stored, in c
 Geekify site is built using Jekyll, and I am using the theme Minimal Mistakes. 
 Jekyll is defined as a simple, blog-aware, static site generator for personal, project, or organization sites. 
 I decided to use Jekyll, since it is the generator used by Github. So to make a long story short, I am using Github not only to "version control" this website, but to host it as well.
+Each commit and push result in an automatic update of this website, it is fast, reliable, and so easy to use!
 
-## Starting with Jekyll
+## Starting with Jekyll and Minimal Mistakes
 
-Many tutorials are available on the net. I am especially grateful to [Peter Wills][3] who did a great job sharing his experience. I have built this website based on the work he did to customize minimal-mistakes.
-The website for Minimal Mistakes includes a great quick-start guide; I recommend the [Starting with `jekyll new`][1] section as a place to start. Using this you should be able to establish a base site with some simple demonstration content, using the Minimal Mistakes theme.
+Many tutorials are available on the net. I am especially grateful to [Peter Wills][pwills] who did a great job sharing his experience. I have built this website based on the work he did to customize minimal-mistakes.
+The website for Minimal Mistakes includes a great quick-start guide; I recommend the [Starting with `jekyll new`][mmistakes_tuto] section as a place to start. Using this you should be able to establish a base site with some simple demonstration content, using the Minimal Mistakes theme.
 
-You can always look directly at [the source code for my site][2] if you want to see exactly what I have in my `Gemfile`, or `_config.yml`, or whatever.
+You can always look directly at [the source code for my site][mchacher_github] if you want to see exactly what I have in my `Gemfile`, or `_config.yml`, or whatever.
 
-[1]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#starting-from-jekyll-new
-[2]: https://github.com/mchacher/mchacher.github.io
-[3]: https://github.com/peterewills/peterewills.github.io
+
+
+[wordpress]: [https://wordpress.org/]
+[jekyll]: https://jekyllrb.com/
+[mmistakes_tuto]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#starting-from-jekyll-new
+[mchacher_github]: https://github.com/mchacher/mchacher.github.io
+[pwills]: http://www.pwills.com/
