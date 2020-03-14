@@ -20,5 +20,15 @@ A static web page is delivered to the user's web browser exactly as stored, in c
 
 Geekify site is built using Jekyll, and I am using the theme Minimal Mistakes. 
 Jekyll is defined as a simple, blog-aware, static site generator for personal, project, or organization sites. 
-I decided to use Jekyll, since it is the generator used by Github and anyone can use it to host its website. I will explain the principles later in this documen
+I decided to use Jekyll, since it is the generator used by Github. So to make a long story short, I am using Github not only to "version control" this website, but to host it as well.
 
+## Starting with Jekyll
+
+Many tutorials are available on the net. I am especially grateful to [Peter Wills][3] who did a great job sharing his experience. I have built this website based on the work he did to customize minimal-mistakes.
+The website for Minimal Mistakes includes a great quick-start guide; I recommend the [Starting with `jekyll new`][1] section as a place to start. Using this you should be able to establish a base site with some simple demonstration content, using the Minimal Mistakes theme.
+
+You can always look directly at [the source code for my site][2] if you want to see exactly what I have in my `Gemfile`, or `_config.yml`, or whatever.
+
+[1]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#starting-from-jekyll-new
+[2]: https://github.com/mchacher/mchacher.github.io
+[3]: https://github.com/peterewills/peterewills.github.io
