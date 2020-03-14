@@ -45,24 +45,33 @@ In order to do this, you need to copy the entire folder which contains all the r
 	cd $(bundle show minimal-mistakes-jekyll)
 	cp -r _sass /path/to/site
 	
-The file `_sass/_reset.scss` is defining 3 levels of `font-size`, respectively medium, large and x-large. This is then used in all `*.scss`.
+The file `_sass//minimal-mistakes/_reset.scss` is defining 3 levels of `font-size`, respectively medium, large and x-large. This is then used in all `*.scss`.
+I update the font-size as followed:
 
 {% highlight html %}
+File: _sass/_reset.scss
   @include breakpoint($medium) {
     font-size: 13px;
   }
 
   @include breakpoint($large) {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   @include breakpoint($x-large) {
-    font-size: 18px;
+    font-size: 15px;
   }
 {% endhighlight %}
 
-Once this file has been edited, you should see the font size reduced in your
-page. 
+Once this file has been edited, you should see the font size reduced in your page. 
+
+I did further modification, since even with these modification of the font sizes, I was not satisfied. 
+A couple of file were updated:
+* `_sass/minimal-mistakes/_archive.scss`
+* `_sass/minimal-mistakes/_base.scss`
+* `_sass/minimal-mistakes/_navigation.scss`
+* `_sass/minimal-mistakes/_page.scss`
+* `_sass/minimal-mistakes/_variables.scss`
 
 
 
