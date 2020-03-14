@@ -25,10 +25,23 @@ Each commit and push result in an automatic update of this website, it is fast, 
 
 ## Starting with Jekyll and Minimal Mistakes
 
+### forewords
 Many tutorials are available on the net. I am especially grateful to [Peter Wills][pwills] who did a great job sharing his experience. I have built this website based on the work he did to customize minimal-mistakes.
-The website for Minimal Mistakes includes a great quick-start guide; I recommend the [Starting with `jekyll new`][mmistakes_tuto] section as a place to start. Using this you should be able to establish a base site with some simple demonstration content, using the Minimal Mistakes theme.
+The website for Minimal Mistakes includes a great [quick-start guide][mmistakes_tuto]. This is definetely a good place to start. Using this you should be able to establish a base site with some simple demonstration content, using the Minimal Mistakes theme.
 
 You can always look directly at [the source code for my site][mchacher_github] if you want to see exactly what I have in my `Gemfile`, or `_config.yml`, or whatever.
+
+They key point is to enable minimal-mistake as a theme, this is done in the `_config.yml` file.
+
+If you have other plugins you want to use (I use `jekyll-feed`), then add them
+to this list as well. Designate the `remote_theme` variable, but do so **after
+setting the theme**, so that you have in your config file
+
+	theme: "minimal-mistakes-jekyll"
+	remote_theme: "mmistakes/minimal-mistakes"
+
+### customization
+
 
 
 
