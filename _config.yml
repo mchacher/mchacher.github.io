@@ -41,6 +41,11 @@ author:
   github : mchacher
   linkedin: marc-chachereau-067a9a4
 
+#comment
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "mchacher"
 
 # pagination for blog page
 paginate: 10 # number of posts to show
