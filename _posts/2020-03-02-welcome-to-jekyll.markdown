@@ -33,7 +33,7 @@ On the negative side:
 ### Jekyll
 
 Geekify site is built using [Jekyll][jekyll], and I am using the theme [Minimal Mistakes][mmistakes]. 
-Jek[Jekyll][jekyll]yll is defined as a simple, blog-aware, static site generator for personal, project, or organization sites. 
+[Jekyll][jekyll] is defined as a simple, blog-aware, static site generator for personal, project, or organization sites. 
 I decided to use [Jekyll][jekyll], since it is the generator used by Github. So to make a long story short, I am using Github not only to "version control" this website, but to host it as well.
 Each commit and push result in an automatic update of this website, it is fast, reliable, and so easy to use!
 
@@ -95,6 +95,14 @@ The defaults skins files are located in `_sass/minimal_mistakes/skins/`.
 
 To match the color chart of Geekify, I have simply defined my own skin files. This was super easy to implement. One can refer to my own custom file [_geekify.scss][skin_geekify].
 
+## Enabling comments via StaticMan
+
+After looking at the different alternatives, I picked-up [StaticMan][staticman] to enable comments. Jekyll is supporting several solutions but this one is static as well, meaning that the comments are integrated into the website. StaticMan says "I keep your content where it belongs". The solution is opensource and free which was a criteria as well.
+
+I have followed the `Get Started`tutorial.
+
+
+
 [markdown]: https://fr.wikipedia.org/wiki/Markdown
 [dotclear]: https://fr.dotclear.org/
 [wordpress]: [https://wordpress.org/]
@@ -105,3 +113,4 @@ To match the color chart of Geekify, I have simply defined my own skin files. Th
 [pwills]: http://www.pwills.com/
 [github_diff]: https://github.com/mchacher/mchacher.github.io/commit/99876ad05e9dee1b126539fb22df16e15984339a?diff=split
 [skin_geekify]: https://github.com/mchacher/mchacher.github.io/blob/master/_sass/minimal-mistakes/skins/_geekify.scss
+[staticman]: https://staticman.net/
