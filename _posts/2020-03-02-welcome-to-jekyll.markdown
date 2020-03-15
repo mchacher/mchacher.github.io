@@ -33,8 +33,8 @@ On the negative side:
 ### Jekyll
 
 Geekify site is built using [Jekyll][jekyll], and I am using the theme [Minimal Mistakes][mmistakes]. 
-[Jekyll][jekyll] is defined as a simple, blog-aware, static site generator for personal, project, or organization sites. 
-I decided to use [Jekyll][jekyll], since it is the generator used by Github. So to make a long story short, I am using Github not only to "version control" this website, but to host it as well.
+Jekyll is defined as a simple, blog-aware, static site generator for personal, project, or organization sites. 
+I decided to use Jekyll, since it is the generator used by Github. So to make a long story short, I am using Github not only to "version control" this website, but to host it as well.
 Each commit and push result in an automatic update of this website, it is fast, reliable, and so easy to use!
 
 ## Starting with Jekyll and Minimal Mistakes
