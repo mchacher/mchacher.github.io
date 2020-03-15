@@ -97,12 +97,16 @@ The defaults skins files are located in `_sass/minimal_mistakes/skins/`.
 
 To match the color chart of Geekify, I have simply defined my own skin files. This was super easy to implement. One can refer to my own custom file [_geekify.scss][skin_geekify].
 
-### Miscellaneous
+## Miscellaneous
 
-## Comments
+### Comments
 
-Enabling comments to get readers inputs is always good on a blog. I wanted to leverage an open source solution, and was very interested in using [Staticman][staticman]. Unfortunately this clever, free, opensource static comments solution is not easy to install. The tutorial is outdated, the gituser account suppose to link to your website having reached its limit.
-So finally, I have setup Disqus
+Enabling comments to get readers inputs is always good on a blog. I wanted to leverage an open source solution, and was very interested in using [Staticman][staticman]. Unfortunately this free and opensource static comments solution is not easy to install. The tutorial is outdated, the gituser account suppose to link to your website having reached its limit.
+
+So finally, I have setup Disqus.
+
+I may give a try later on to Staticman, having found the following [tutorial][tuto_staticman]
+
 
 [github]: https://github.com/
 [markdown]: https://fr.wikipedia.org/wiki/Markdown
@@ -116,3 +120,5 @@ So finally, I have setup Disqus
 [github_diff]: https://github.com/mchacher/mchacher.github.io/commit/99876ad05e9dee1b126539fb22df16e15984339a?diff=split
 [skin_geekify]: https://github.com/mchacher/mchacher.github.io/blob/master/_sass/minimal-mistakes/skins/_geekify.scss
 [staticman]: https://staticman.net/
+[tuto_staticman]: https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html
+
