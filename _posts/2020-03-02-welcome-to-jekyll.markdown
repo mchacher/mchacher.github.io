@@ -95,12 +95,6 @@ The defaults skins files are located in `_sass/minimal_mistakes/skins/`.
 
 To match the color chart of Geekify, I have simply defined my own skin files. This was super easy to implement. One can refer to my own custom file [_geekify.scss][skin_geekify].
 
-## Enabling comments via StaticMan
-
-After looking at the different alternatives, I picked-up [StaticMan][staticman] to enable comments. Jekyll is supporting several solutions but this one is static as well, meaning that the comments are integrated into the website. StaticMan says "I keep your content where it belongs". The solution is opensource and free which was a criteria as well.
-
-I have followed the `Get Started`tutorial.
-
 
 
 [markdown]: https://fr.wikipedia.org/wiki/Markdown
