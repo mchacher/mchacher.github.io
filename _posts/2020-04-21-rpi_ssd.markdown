@@ -1,9 +1,9 @@
 ---
-title:  "Raspberry 4 running on SSD"
+title:  "Raspberry (and older versions) running Raspbian on SSD"
 category: raspberry
 date: 2020-04-21
 last_modified_at: 2019-04-21
-excerpt: "How to run Raspberry Pi 4 on an SSD"
+excerpt: "Raspberry (and older versions) running Raspbian on SSD"
 ---
 
 ## Why running on SSD?
@@ -47,7 +47,7 @@ a magic shell script that does everything for you: [rpi-clone][rpi-clone].
 
 Just follow the 4 + 1 optional steps below.
 
-__Step1: download and install rpi-clone__
+**Step1: download and install rpi-clone**
 
 If not already done, install git on your raspbian or just skip the first command below
 
@@ -59,7 +59,7 @@ Then, install rpi-clone
 	$ cd rpi-clone
 	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
 
-__Step 2: prepare hostname__
+**Step 2: prepare hostname**
 
 rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
 
@@ -67,7 +67,7 @@ rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts file
     # where testhostname is the host name of your pi
 
 
-__Step 3: clone your SD card to USB disk, and tell the SD card to boot from disk__
+**Step 3: clone your SD card to USB disk, and tell the SD card to boot from disk**
 
 If fstab uses PARTUUID:
 
@@ -83,12 +83,12 @@ To check your fstab file just look at it and check whether it is using PARTUUID 
 
 As such the SD Card will only be used to tell the pi to boot from disk.
 
-__Step4: reboot your pi__
+**Step4: reboot your pi**
 
     $ sudo reboot
 
 
-__Step 5 (optional): boot directly from SSD, without SD card__
+**Step 5 (optional): boot directly from SSD, without SD card**
 
 If you are using a pi3 (or older versions) you can boot from SSD only while activating *USB mass storage boot*.
 This is not possible on pi4 at the time I am writing this article. This feature is known to be supported in a future update.
