@@ -9,14 +9,14 @@ excerpt: "Raspberry (and older versions) running Raspbian on SSD"
 ## Why running on SSD?
 
 ### Reliability
-SD Cards are not reliable enough to safely run you RPI. The lifetime of Flash cards is limited by the maximum number of writes per memory cell. A flash card has an on-card memory controller that performs wear leveling management. This tries to spread write actions over all memory cells - through time - evenly, to prevent premature partial wear out. The wear levelling unfortunately does not completely prevent microSD cards in Raspberry Pi’s (and similar devices) from wearing out.
+SD Cards are not reliable enough to safely run Raspbian on a Pi. The lifetime of Flash cards is limited by the maximum number of writes per memory cell. A flash card has an on-card memory controller that performs wear leveling management. This tries to spread write actions over all memory cells - through time - evenly, to prevent premature partial wear out. The wear levelling unfortunately does not completely prevent microSD cards in Raspberry Pi’s (and similar devices) from wearing out.
 
 ### Performance
 SSD are showing far much greater performances. Some tests on the net are showing a factor of 3 to 5  (read/write) performance.
 
 ### Type of SSD
 I like to use tiny mSATA SSD that I buy for less than 30$. Any other SSD can be used.
-Pay attention to have a power supply strong enough to feed both the pi and the SSD.
+Pay attention to have a power supply strong enough to feed both the Pi and the SSD.
 
 ## How?
 Transfering an existing SD Cards Raspbian and associated application to the SSD is a piece of cake, and it has been greatly automated.
@@ -45,9 +45,9 @@ Many websites are describing a "step-by-step" process, with lot of command lines
 As a linux fellow user, I did it many times, but it's boring and not error proof. I was super happy to discover 
 a magic shell script that does everything for you: [rpi-clone][rpi-clone].
 
-Just follow the 4 + 1 optional steps below.
+Just follow the 3 + 1 optional steps below.
 
-**Step1: download and install rpi-clone**
+**Step 1: download and install rpi-clone**
 
 If not already done, install git on your raspbian or just skip the first command below
 
@@ -59,36 +59,30 @@ Then, install rpi-clone
 	$ cd rpi-clone
 	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
 
-**Step 2: prepare hostname**
-
-rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
-
-    $ sudo rpi-clone-setup -t testhostname
-    # where testhostname is the host name of your pi
-
-
-**Step 3: clone your SD card to USB disk, and tell the SD card to boot from disk**
+**Step 2: clone your SD card to USB disk, and tell the SD card to boot from disk**
 
 If fstab uses PARTUUID:
 
-    $ rpi-clone -l sda
+    $ rpi-clone -s hostname -l sda
+    # where hostname is the host name of your Pi
 
 If fstab uses device names:
 
-	$ rpi-clone -l sda -e sda
+	$ rpi-clone -s hostname -l sda -e sda
+    # where hostname is the host name of your Pi
 
 To check your fstab file just look at it and check whether it is using PARTUUID or device names.
 
     $ cat /etc/fstab
 
-As such the SD Card will only be used to tell the pi to boot from disk.
+As such the SD Card will only be used to tell the Pi to boot from disk.
 
-**Step4: reboot your pi**
+**Step 3: reboot your Pi**
 
     $ sudo reboot
 
 
-**Step 5 (optional): boot directly from SSD, without SD card**
+**Step 4 (optional): boot directly from SSD, without SD card**
 
 If you are using a pi3 (or older versions) you can boot from SSD only while activating *USB mass storage boot*.
 This is not possible on pi4 at the time I am writing this article. This feature is known to be supported in a future update.
