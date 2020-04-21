@@ -61,6 +61,11 @@ Then, install rpi-clone
 
 **Step 2: clone your SD card to USB disk, and tell the SD card to boot from disk**
 
+Depending on the ftab configuration the script command will be slightly different. 
+First check your fstab file to check whether it is using PARTUUID or device names to describe the filesystems the system can mount.
+
+    $ cat /etc/fstab
+
 If fstab uses PARTUUID:
 
     $ rpi-clone -s hostname -l sda
@@ -71,18 +76,9 @@ If fstab uses device names:
 	$ rpi-clone -s hostname -l sda -e sda
     # where hostname is the host name of your Pi
 
-To check your fstab file just look at it and check whether it is using PARTUUID or device names.
+After successful execution of the script, the SD Card will only be used to tell the Pi to boot from disk.
 
-    $ cat /etc/fstab
-
-As such the SD Card will only be used to tell the Pi to boot from disk.
-
-**Step 3: reboot your Pi**
-
-    $ sudo reboot
-
-
-**Step 4 (optional): boot directly from SSD, without SD card**
+**Step 3 (optional): boot directly from SSD, without SD card**
 
 If you are using a pi3 (or older versions) you can boot from SSD only while activating *USB mass storage boot*.
 This is not possible on pi4 at the time I am writing this article. This feature is known to be supported in a future update.
@@ -91,3 +87,7 @@ All details are provided on the raspberry [documentation][rpi-usb-mass-storage-b
 [microSD]: https://hackernoon.com/raspberry-pi-4b-msata-ssd-vs-microsd-dg3j33ju
 [rpi-clone]: https://github.com/billw2/rpi-clone
 [rpi-usb-mass-storage-boot]: https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md
+
+**Step 4: reboot your Pi**
+
+    $ sudo reboot
