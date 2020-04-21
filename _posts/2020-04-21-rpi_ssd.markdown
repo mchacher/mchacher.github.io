@@ -1,0 +1,47 @@
+---
+title:  "Raspberry 4 running on SSD"
+category: raspberry
+date: 2020-04-21
+last_modified_at: 2019-04-21
+excerpt: "How to run Raspberry Pi 4 on an SSD"
+---
+
+## Why running on SSD?
+
+SD Cards are not reliable enough to safely run you RPI. The lifetime of Flash cards is limited by the maximum number of writes per memory cell. A flash card has an on-card memory controller that performs wear leveling management. This tries to spread write actions over all memory cells - through time - evenly, to prevent premature partial wear out. The wear levelling unfortunately does not completely prevent microSD cards in Raspberry Pi’s (and similar devices) from wearing out.
+
+SSD are showing far much greater performances. Some tests on the net are showing a factor of 3 to 5  (read/write) performance.
+
+## How?
+
+### Type of SSD
+
+I like to use tiny mSATA SSD that I buy for a less than 30$.
+Transfering an existing SD Cards Raspbian and associated application to the SSD is a piece of cake, and it has been greatly automated.
+
+### Identifying your SSD
+
+Your SSD should be on `/dev/sda`. 
+You can further check it using `lsblk`.
+
+### Stopping critical services
+
+To avoid any issues during cloning, I invite you to stop all critical services / applicatins running on you Pi.
+    Identify running services: `systemctl list-unit-files | grep enabled`
+    Stopping enabled services: `stop systemctl stop application.service`, where application is the name of your service
+
+### Using rpi-clone
+
+[rpi-clone][rpi-clone] is a magic shell script that does everything for you.
+
+Follow the steps:
+    download and install rpi-clone
+    `
+    $ git clone https://github.com/billw2/rpi-clone.git 
+	$ cd rpi-clone
+	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
+    `
+    
+
+[microSD]: https://hackernoon.com/raspberry-pi-4b-msata-ssd-vs-microsd-dg3j33ju
+[rpi-clone]: https://github.com/billw2/rpi-clone
