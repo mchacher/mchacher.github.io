@@ -23,7 +23,7 @@ Transfering an existing SD Cards Raspbian and associated application to the SSD 
 
 ### Identifying your SSD
 Your SSD should be on `/dev/sda`. 
-You can further check it using 
+You can further check it using:
 
     $ lsblk
 
@@ -56,7 +56,7 @@ rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts file
 
     $ sudo rpi-clone-setup -t testhostname`
 
-**Clone your SD card to USB disk, and tell the SD card to boot from disk.**
+**Clone your SD card to USB disk, and tell the SD card to boot from disk**
 
 If fstab uses PARTUUID:
 
