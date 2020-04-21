@@ -90,7 +90,7 @@ As such the SD Card will only be used to tell the pi to boot from disk.
 
 **Step 5 (optional): boot directly from SSD, without SD card**
 
-If you are using a pi3 (or older versions) you can boot from SSD only while activating **USB mass storage boot**.
+If you are using a pi3 (or older versions) you can boot from SSD only while activating *USB mass storage boot*.
 This is not possible on pi4 at the time I am writing this article. This feature is known to be supported in a future update.
 All details are provided on the raspberry [rpi-usb-mass-storage-boot][documentation].
 
