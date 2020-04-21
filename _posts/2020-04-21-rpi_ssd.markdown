@@ -66,15 +66,17 @@ First check your fstab file to check whether it is using PARTUUID or device name
 
     $ cat /etc/fstab
 
+Then run rpi-clone with:
+* `hostname` being the host name you have selected for your Pi
+* `sda` being idenfied as your SSD idenfier with lsblk
+
 If fstab uses PARTUUID:
 
     $ rpi-clone -s hostname -l sda
-    # where hostname is the host name of your Pi
 
 If fstab uses device names:
 
 	$ rpi-clone -s hostname -l sda -e sda
-    # where hostname is the host name of your Pi
 
 After successful execution of the script, the SD Card will only be used to tell the Pi to boot from disk.
 
