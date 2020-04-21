@@ -45,18 +45,18 @@ Stopping enabled services:
 
 Follow the steps:
 
-**download and install rpi-clone**
+**Step1: download and install rpi-clone**
 
     $ git clone https://github.com/billw2/rpi-clone.git 
 	$ cd rpi-clone
 	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
 
-**Prepare hostname**
+**Step 2: prepare hostname**
 rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
 
     $ sudo rpi-clone-setup -t testhostname`
 
-**Clone your SD card to USB disk, and tell the SD card to boot from disk**
+**Step 3: clone your SD card to USB disk, and tell the SD card to boot from disk**
 
 If fstab uses PARTUUID:
 
