@@ -15,24 +15,28 @@ SD Cards are not reliable enough to safely run you RPI. The lifetime of Flash ca
 SSD are showing far much greater performances. Some tests on the net are showing a factor of 3 to 5  (read/write) performance.
 
 ## How?
-
-### Type of SSD
-
-I like to use tiny mSATA SSD that I buy for a less than 30$.
 Transfering an existing SD Cards Raspbian and associated application to the SSD is a piece of cake, and it has been greatly automated.
 
-### Identifying your SSD
+### Type of SSD
+I like to use tiny mSATA SSD that I buy for less than 30$. Any other SSD can be used.
+Pay attention to have a power supply strong enough to feed both the pi and the SSD.
 
+### Identifying your SSD
 Your SSD should be on `/dev/sda`. 
 You can further check it using 
 
     $ lsblk
 
 ### Stopping critical services
-
 To avoid any issues during cloning, I invite you to stop all critical services / applicatins running on you Pi.
-* Identify running services: `systemctl list-unit-files | grep enabled`
-* Stopping enabled services: `stop systemctl stop application.service`, where application is the name of your service.
+* Identify running services: 
+
+    systemctl list-unit-files | grep enabled
+
+* Stopping enabled services:
+
+    stop systemctl stop application.service
+    *where application is the name of your serviceµ
 
 ### Using rpi-clone
 
@@ -40,18 +44,18 @@ To avoid any issues during cloning, I invite you to stop all critical services /
 
 Follow the steps:
 
-#1 - download and install rpi-clone
+**#1** - download and install rpi-clone
 
     $ git clone https://github.com/billw2/rpi-clone.git 
 	$ cd rpi-clone
 	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
 
-#2 - Prepare your clone with the right hostname
+**#2** - Prepare your clone with the right hostname
 rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
 
-    `$ sudo rpi-clone-setup -t testhostname`
+    $ sudo rpi-clone-setup -t testhostname`
 
-#3 - Clone your SD card to USB disk, and tell the SD card to boot from disk:
+**#3** - Clone your SD card to USB disk, and tell the SD card to boot from disk:
 If fstab uses PARTUUID:
 
 	$ rpi-clone -l sda
@@ -66,7 +70,7 @@ To check your fstab file just look at it and check whether it is using PARTUUID 
 
 As such the SD Card will only be used to tell the pi to boot from disk.
 
-#4 - if you are using an pi3 you can tell him to boot from SSD only. This is not possible on pi4 at the time I am writing this article.
+**#4** - if you are using an pi3 you can tell him to boot from SSD only. This is not possible on pi4 at the time I am writing this article.
 
 I let you read the process on other web sites.
 
