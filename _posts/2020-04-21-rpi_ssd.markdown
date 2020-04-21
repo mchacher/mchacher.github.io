@@ -32,12 +32,12 @@ To avoid any issues during cloning, one should better stop all critical services
 
 Identify running services:
 
-    systemctl list-unit-files | grep enabled
+    $ systemctl list-unit-files | grep enabled
 
 Stopping enabled services:
 
-    stop systemctl stop application.service
-    *where application is the name of your service*
+    $ stop systemctl stop application.service
+    # where application is the name of your service
 
 ### Using rpi-clone
 
@@ -47,14 +47,19 @@ Follow the steps:
 
 **Step1: download and install rpi-clone**
 
+If needed install git on your raspbian, or skip the first command below.
+
+    $ sudo apt-get install git
     $ git clone https://github.com/billw2/rpi-clone.git 
 	$ cd rpi-clone
 	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
 
 **Step 2: prepare hostname**
+
 rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
 
-    $ sudo rpi-clone-setup -t testhostname`
+    $ sudo rpi-clone-setup -t testhostname
+
 
 **Step 3: clone your SD card to USB disk, and tell the SD card to boot from disk**
 
@@ -72,7 +77,7 @@ To check your fstab file just look at it and check whether it is using PARTUUID 
 
 As such the SD Card will only be used to tell the pi to boot from disk.
 
-**optional: boot directly from SSD, without SD card**
+**Step 4 (optional): boot directly from SSD, without SD card**
 
 if you are using a pi3 you can tell him to boot from SSD only. This is not possible on pi4 at the time I am writing this article.
 
