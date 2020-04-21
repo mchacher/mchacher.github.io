@@ -8,8 +8,10 @@ excerpt: "How to run Raspberry Pi 4 on an SSD"
 
 ## Why running on SSD?
 
+### Reliability
 SD Cards are not reliable enough to safely run you RPI. The lifetime of Flash cards is limited by the maximum number of writes per memory cell. A flash card has an on-card memory controller that performs wear leveling management. This tries to spread write actions over all memory cells - through time - evenly, to prevent premature partial wear out. The wear levelling unfortunately does not completely prevent microSD cards in Raspberry Pi’s (and similar devices) from wearing out.
 
+### Performance
 SSD are showing far much greater performances. Some tests on the net are showing a factor of 3 to 5  (read/write) performance.
 
 ## How?
