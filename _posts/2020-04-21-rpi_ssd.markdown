@@ -28,16 +28,16 @@ You can further check it using
     $ lsblk
 
 ### Stopping critical services
-To avoid any issues during cloning, I invite you to stop all critical services / applications running on you Pi.
+To avoid any issues during cloning, one should better stop all critical services / applications running on your Pi.
 
-**Identify running services:**
+Identify running services:
 
     systemctl list-unit-files | grep enabled
 
-**Stopping enabled services:**
+Stopping enabled services:
 
     stop systemctl stop application.service
-    *where application is the name of your serviceµ
+    *where application is the name of your service*
 
 ### Using rpi-clone
 
