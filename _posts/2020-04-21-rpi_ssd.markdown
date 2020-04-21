@@ -45,7 +45,7 @@ Many websites are describing a "step-by-step" process, with lot of command lines
 As a linux fellow user, I did it many times, but it's boring and not error proof. I was super happy to discover 
 a magic shell script that does everything for you: [rpi-clone][rpi-clone].
 
-Just follow the 3 + 1 optional steps below.
+Just follow the 4 + 1 optional steps below.
 
 **Step1: download and install rpi-clone**
 
@@ -83,11 +83,17 @@ To check your fstab file just look at it and check whether it is using PARTUUID 
 
 As such the SD Card will only be used to tell the pi to boot from disk.
 
-**Step 4 (optional): boot directly from SSD, without SD card**
+**Step4: reboot your pi**
 
-if you are using a pi3 you can tell him to boot from SSD only. This is not possible on pi4 at the time I am writing this article.
+    $ sudo reboot
 
-I let you read the process on other web sites.
+
+**Step 5 (optional): boot directly from SSD, without SD card**
+
+If you are using a pi3 (or older versions) you can boot from SSD only while activating **USB mass storage boot**.
+This is not possible on pi4 at the time I am writing this article. This feature is known to be supported in a future update.
+All details are provided on the raspberry [rpi-usb-mass-storage-boot][documentation].
 
 [microSD]: https://hackernoon.com/raspberry-pi-4b-msata-ssd-vs-microsd-dg3j33ju
 [rpi-clone]: https://github.com/billw2/rpi-clone
+[rpi-usb-mass-storage-boot]: https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md
