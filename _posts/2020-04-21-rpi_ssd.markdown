@@ -39,17 +39,22 @@ Stopping enabled services:
     $ stop systemctl stop application.service
     # where application is the name of your service
 
-### Using rpi-clone
+### Cloning SD Card, and booting from SSD
 
-[rpi-clone][rpi-clone] is a magic shell script that does everything for you.
+Many websites are describing a "step-by-step" process, with lot of command lines to carry out this operation.
+As a linux fellow user, I did it many times, but it's boring and not error proof. I was super happy to discover 
+a magic shell script that does everything for you: [rpi-clone][rpi-clone].
 
-Follow the steps:
+Just follow the 3 + 1 optional steps below.
 
 **Step1: download and install rpi-clone**
 
-If needed install git on your raspbian, or skip the first command below.
+If not already done, install git on your raspbian or just skip the first command below
 
     $ sudo apt-get install git
+
+Then, install rpi-clone
+
     $ git clone https://github.com/billw2/rpi-clone.git 
 	$ cd rpi-clone
 	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
@@ -59,6 +64,7 @@ If needed install git on your raspbian, or skip the first command below.
 rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
 
     $ sudo rpi-clone-setup -t testhostname
+    # where testhostname is the host name of your pi
 
 
 **Step 3: clone your SD card to USB disk, and tell the SD card to boot from disk**
