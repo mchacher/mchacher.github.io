@@ -19,7 +19,7 @@ I like to use tiny mSATA SSD that I buy for less than 30$. Any other SSD can be 
 Pay attention to have a power supply strong enough to feed both the Pi and the SSD.
 
 ## How?
-Transfering an existing SD Cards Raspbian and associated application to the SSD is a piece of cake, and it has been greatly automated.
+Transfering the whole filesystem on the SD Card to the SSD is a piece of cake.
 
 ### Identifying your SSD
 Your SSD should be on `/dev/sda`. 
