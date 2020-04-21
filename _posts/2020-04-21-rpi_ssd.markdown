@@ -27,21 +27,36 @@ You can further check it using `lsblk`.
 ### Stopping critical services
 
 To avoid any issues during cloning, I invite you to stop all critical services / applicatins running on you Pi.
-    Identify running services: `systemctl list-unit-files | grep enabled`
-    Stopping enabled services: `stop systemctl stop application.service`, where application is the name of your service
+* Identify running services: `systemctl list-unit-files | grep enabled`
+* Stopping enabled services: `stop systemctl stop application.service`, where application is the name of your service.
 
 ### Using rpi-clone
 
 [rpi-clone][rpi-clone] is a magic shell script that does everything for you.
 
 Follow the steps:
-    download and install rpi-clone
-    `
-    $ git clone https://github.com/billw2/rpi-clone.git 
+
+download and install rpi-clone
+    `$ git clone https://github.com/billw2/rpi-clone.git 
 	$ cd rpi-clone
-	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
-    `
-    
+	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin`
+
+Prepare your clone with the right hostname
+rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
+
+    `$ sudo rpi-clone-setup -t testhostname`
+
+Clone your SD card to USB disk, and tell the SD card to boot from disk:
+If fstab uses PARTUUID:
+	$ rpi-clone -l sda
+If fstab uses device names:
+	$ rpi-clone -l sda -e sda
+
+To check your fstab file just look at it and check whether it is using PARTUUID or device names.
+`cat /etc/fstab
+
+As such the SD Card will only be used to tell the Pi to boot from disk.
+
 
 [microSD]: https://hackernoon.com/raspberry-pi-4b-msata-ssd-vs-microsd-dg3j33ju
 [rpi-clone]: https://github.com/billw2/rpi-clone
