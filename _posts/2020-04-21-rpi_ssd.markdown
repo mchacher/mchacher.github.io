@@ -14,12 +14,12 @@ SD Cards are not reliable enough to safely run you RPI. The lifetime of Flash ca
 ### Performance
 SSD are showing far much greater performances. Some tests on the net are showing a factor of 3 to 5  (read/write) performance.
 
-## How?
-Transfering an existing SD Cards Raspbian and associated application to the SSD is a piece of cake, and it has been greatly automated.
-
 ### Type of SSD
 I like to use tiny mSATA SSD that I buy for less than 30$. Any other SSD can be used.
 Pay attention to have a power supply strong enough to feed both the pi and the SSD.
+
+## How?
+Transfering an existing SD Cards Raspbian and associated application to the SSD is a piece of cake, and it has been greatly automated.
 
 ### Identifying your SSD
 Your SSD should be on `/dev/sda`. 
@@ -30,11 +30,11 @@ You can further check it using
 ### Stopping critical services
 To avoid any issues during cloning, I invite you to stop all critical services / applications running on you Pi.
 
-Identify running services: 
+**Identify running services:**
 
     systemctl list-unit-files | grep enabled
 
-Stopping enabled services:
+**Stopping enabled services:**
 
     stop systemctl stop application.service
     *where application is the name of your serviceµ
