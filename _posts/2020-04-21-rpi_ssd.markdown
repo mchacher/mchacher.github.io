@@ -44,21 +44,22 @@ To avoid any issues during cloning, I invite you to stop all critical services /
 
 Follow the steps:
 
-#### 1 - download and install rpi-clone
+**download and install rpi-clone**
 
     $ git clone https://github.com/billw2/rpi-clone.git 
 	$ cd rpi-clone
 	$ sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
 
-**#2** - Prepare your clone with the right hostname
+**Prepare hostname**
 rpi-clone-setup is for setting the hostname in /etc/hostname and /etc/hosts files. It is run automatically by rpi-clone if -s args are given, but before your first clone using a -s option, test run rpi-clone-setup with:
 
     $ sudo rpi-clone-setup -t testhostname`
 
-**#3** - Clone your SD card to USB disk, and tell the SD card to boot from disk:
+**Clone your SD card to USB disk, and tell the SD card to boot from disk.**
+
 If fstab uses PARTUUID:
 
-	$ rpi-clone -l sda
+    $ rpi-clone -l sda
 
 If fstab uses device names:
 
@@ -70,7 +71,9 @@ To check your fstab file just look at it and check whether it is using PARTUUID 
 
 As such the SD Card will only be used to tell the pi to boot from disk.
 
-**#4** - if you are using an pi3 you can tell him to boot from SSD only. This is not possible on pi4 at the time I am writing this article.
+**optional: boot directly from SSD, without SD card**
+
+if you are using a pi3 you can tell him to boot from SSD only. This is not possible on pi4 at the time I am writing this article.
 
 I let you read the process on other web sites.
 
